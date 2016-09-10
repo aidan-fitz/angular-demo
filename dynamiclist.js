@@ -6,7 +6,7 @@
 
 var socialHacks = angular.module('socialHacks', []);
 
-socialHacks.controller('SponsorListCtl', ['$scope', function($scope) {
+var loadSponsors = function($scope, $http) {
 
 /*  $scope.sponsors = [
     {
@@ -33,4 +33,7 @@ socialHacks.controller('SponsorListCtl', ['$scope', function($scope) {
     //$scope.sponsors = JSON.parse(response);
   });
 
-}]);
+};
+
+// need to add $http. Creds to http://stackoverflow.com/a/22125671/2276567
+socialHacks.controller('SponsorListCtl', ['$scope', '$http', loadSponsors]);
