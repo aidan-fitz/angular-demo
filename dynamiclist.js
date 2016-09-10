@@ -8,7 +8,7 @@ var socialHacks = angular.module('socialHacks', []);
 
 socialHacks.controller('SponsorListCtl', ['$scope', function($scope) {
 
-  $scope.sponsors = [
+/*  $scope.sponsors = [
     {
       "name": "Balsamiq",
       "url": "https://balsamiq.com/",
@@ -23,14 +23,14 @@ socialHacks.controller('SponsorListCtl', ['$scope', function($scope) {
       "tier": "bronze",
       "blurb": "Woogle is a made-up company. Apparently it's a product too."
     }
-  ];
+  ]; */
 
-/*  // download the sponsor list in a JSON file...
+  // download the sponsor list in a JSON file...
   $http.get("sponsors.json").success(function(response) {
 
-    document.write(response);
+    //document.write(response);
     // ... and put it in the scope
-    // $scope.sponsors = JSON.parse(response);
-  });*/
+    $scope.sponsors = JSON.parse(response);
+  });
 
 }]);
