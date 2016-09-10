@@ -28,9 +28,9 @@ socialHacks.controller('SponsorListCtl', ['$scope', function($scope) {
   // download the sponsor list in a JSON file...
   $http.get("sponsors.json").success(function(response) {
 
-    //document.write(response);
+    document.write(response);
     // ... and put it in the scope
-    $scope.sponsors = JSON.parse(response);
+    //$scope.sponsors = JSON.parse(response);
   });
 
 }]);
