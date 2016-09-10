@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Social Hacks</title>
+
+  <!-- Angular 1 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+  <!-- our custom JS code -->
+  <script src="dynamiclist.js"></script>
+
+</head>
+<body ng-app="socialHacks" ng-controller="SponsorListCtl">
+
+  <h1>Sponsors</h1>
+
+  <div ng-repeat="sponsor in sponsors">
+    <h3><a href="{{sponsor.url}}">{{sponsor.name}}</a></h3>
+
+    <p>{{sponsor.blurb}}</p>
+
+    <img src="{{sponsor.logo}}" alt="{{sponsor.name}}" />
+  </div>
+
+</body>
+</html>
